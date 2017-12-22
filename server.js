@@ -2,9 +2,10 @@ const express = require("express");
 const request = require("request");
 const cors = require("cors");
 const http = require("http");
-const {API_KEY, PORT} = require("./config");
+const {API_KEY} = require("./config");
 const {CLIENT_ORIGIN} = require("./config");
 const app = express();
+const PORT = process.env.PORT || 8000;
 
 app.use(express.static("./"));
 
